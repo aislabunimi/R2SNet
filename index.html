@@ -123,23 +123,6 @@
     </div>
 </section>
 
-<section class="section", id="Method">
-    <div class="container is-max-desktop">
-        <!-- Abstract. -->
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-five-fifths">
-                <h2 class="title is-3">Method</h2>
-                <div class="content has-text-justified">
-                    <video autoplay muted playsinline loop height="100%">
-                        <source src="./static/video/r2snet_method.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-        </div>
-        <!--/ Abstract. -->
-    </div>
-</section>
-
 <section class="section", id="scenario">
     <div class="container is-max-desktop">
         <!-- Abstract. -->
@@ -164,10 +147,27 @@
                         and suppression of bounding boxes.
                     </p>
                 </div>
-                <div class="content is-centered">   
-                        <img src="static/images/cloud_architecture.png" style="width: 60%">
+                <div class="content is-centered">
+                    <img src="static/images/cloud_architecture.png" style="width: 60%">
                 </div>
 
+            </div>
+        </div>
+        <!--/ Abstract. -->
+    </div>
+</section>
+
+<section class="section", id="Method">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-five-fifths">
+                <h2 class="title is-3">Method</h2>
+                <div class="content has-text-justified">
+                    <video autoplay muted playsinline loop height="100%">
+                        <source src="./static/video/r2snet_method.mp4" type="video/mp4">
+                    </video>
+                </div>
             </div>
         </div>
         <!--/ Abstract. -->
@@ -193,7 +193,7 @@
                         end-to-end.
                     </p>
                 </div>
-                <div class="container is-max-desktop has-text-centered" style="width: 80%">
+                <div class="container is-max-desktop has-text-centered" style="width: 100%">
                     <div class="container is-clipped" >
                         <div id="slider">
 
@@ -266,12 +266,14 @@
                 <h2 class="title is-3">Experiments</h2>
                 <div class="content has-text-justified">
                     <p>
-                        To carry out our experiments,we teleoperate a Giraff-X robot for
-                        mapping 4 real environments (3 university facilities and an apartment).
-                        We train different versions of R2SNet using the
-                        25, 50, and 75% of data randomly sampled (the last 25% is used for testing).
+                        To carry out our experiments, we teleoperate a Giraff-X robot for
+                        mapping 4 real environments (3 university facilities and an apartment) while acquiring images at 1 Hz
+                        with a low resolution Orbecc Astra Camera.
+                        We train different versions of R2SNet using increasing amounts of data and varying the
+                        number of input proposals. We prove that
                         R2SNet strongly improves the performance obtained by using the TaskNet alone even
-                        with a few training data.
+                        with a few training data (onl the 25% of the acquired images)
+                        and with a reasonable number of bounding box to refine (between 30 to 100).
 
                     </p>
                 </div>
@@ -298,7 +300,10 @@
 <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
         <h2 class="title is-3">BibTeX</h2>
-        <pre style="font-size: 16px;"><code>@article{TODO
+        <pre style="font-size: 16px;"><code>@misc{antonazzi2024r2snet,
+      title={R2SNet: Scalable Domain Adaptation for Object Detection in Cloud-Based Robots Ecosystems via Proposal Refinement},
+      author={Michele Antonazzi and Matteo Luperto and N. Alberto Borghese and Nicola Basilico},
+      year={2024}
 }</code></pre>
     </div>
 </section>
@@ -307,7 +312,7 @@
     <div class="container">
         <div class="content has-text-centered">
 
-            <a class="icon-link" href="" class="external-link" disabled>
+            <a class="icon-link" href="https://arxiv.org/abs/2403.11567" class="external-link" disabled>
                 <i class="ai ai-arxiv"></i>
             </a>
             <a class="icon-link" href="https://github.com/aislabunimi/door-detection-long-term/tree/bbox_filtering" class="external-link" disabled>
