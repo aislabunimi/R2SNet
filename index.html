@@ -46,7 +46,7 @@
                     </h1>
                     <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://antonazzi.di.unimi.it">Michele Antonazzi</a><sup>1</sup>,
+              <a href="https://antonazzi.di.unimi.it">Michele Antonazzi</a>,
             </span>
                         <span class="author-block">
               <a href="http://luperto.di.unimi.it">Matteo Luperto</a>,
@@ -55,19 +55,19 @@
               <a href="https://borghese.di.unimi.it">N. Alberto Borghese</a>,
             </span>
                         <span class="author-block">
-              <a href="https://basilico.di.unimi.it">Nicola Basilico</a>,
+              <a href="https://basilico.di.unimi.it">Nicola Basilico</a>
             </span>
 
                     </div>
                     <div class="is-size-5 publication-authors">
-                        <span class="author-block"><sup>1</sup></span></sup>All authors are with the Department of Computer Science, University of
+                        <span class="author-block">All authors are with the Department of Computer Science, University of
                         Milan, Milano, Italy</span>&nbsp;&nbsp;
 
                     </div>
 
                     <div class="is-size-5 emails">
             <span class="emails">
-              <a href="mailto: yueyang1@seas.upenn.edu">name.surname@unimi.it</a>&nbsp;&nbsp;
+              <a>name.surname@unimi.it</a>&nbsp;&nbsp;
             </span>
 
                     </div>
@@ -79,7 +79,7 @@
 
                             <!-- arxiv Link. -->
                             <span class="link-block">
-                <a href=""
+                <a href="https://arxiv.org/abs/2403.11567"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -107,8 +107,6 @@
     </div>
 </section>
 
-
-
 <section class="section", id="abstract">
     <div class="container is-max-desktop">
         <!-- Abstract. -->
@@ -125,81 +123,167 @@
     </div>
 </section>
 
-<section class="section" id="demo">
-    <div class="container is-max-desktop has-text-centered">
-        <div class="container is-clipped">
-            <div id="slider">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image ">
-                            <img
-                                    src="static/images/scenario.png"
-                                    alt=""
-                            />
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="item__title">
-                            Application scenario
-                        </div>
-                        <div class="item__description">
-                            <!--Ici une petite description pour tester le slider-->
-                        </div>
-                    </div>
+<section class="section", id="Method">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-five-fifths">
+                <h2 class="title is-3">Method</h2>
+                <div class="content has-text-justified">
+                    <video autoplay muted playsinline loop height="100%">
+                        <source src="./static/video/r2snet_method.mp4" type="video/mp4">
+                    </video>
                 </div>
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-covered ">
-                            <img
-                                    src="static/images/main_architecture.png"
-                                    alt=""
-                            />
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="item__title">
-                            Main Architecture
-                        </div>
-                        <div class="item__description">
-                            <!--Ici une petite description pour tester le slider-->
-                        </div>
-                    </div>
-                </div>
+            </div>
+        </div>
+        <!--/ Abstract. -->
+    </div>
+</section>
 
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-covered ">
-                            <img
-                                    src="static/images/background_network.png"
-                                    alt=""
-                            />
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="item__title">
-                            BFNet
-                        </div>
-                        <div class="item__description">
-                            <!--Ici une petite description pour tester le slider-->
-                        </div>
+<section class="section", id="scenario">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-five-fifths">
+                <h2 class="title is-3">Scenario</h2>
+                <div class="columns is-centered">
+                    <div class="column is-half"></div>
+                    <div class="column">
+
                     </div>
                 </div>
+                <div class="content has-text-justified">
+                    <p>
 
+                        We consider a robotic ecosystem where multiple independent units are deployed across
+                        different environments and rely on a cloud-based DNN model (called TaskNet) to perform object detection.
+                        We perform efficient domain adaptation by refining the TaskNet's proposals
+                        locally on the robots. To do this, we introduce R2SNet, a novel lightweight DNN
+                        architecture focuses on three
+                        different types of corrective actions: relabeling, rescoring,
+                        and suppression of bounding boxes.
+                    </p>
+                </div>
+                <div class="content is-centered">   
+                        <img src="static/images/cloud_architecture.png" style="width: 60%">
+                </div>
 
             </div>
         </div>
-        <script>
-            bulmaCarousel.attach('#slider', {
-                slidesToScroll: 1,
-                slidesToShow: 1,
-                infinite: true,
-            });
-        </script>
-        <!--
-        <p class="has-text-centered">
-            <span class="dnerf">Holodeck</span> can generate diverse types of 3D environments (arcade, spa, museum), customize for styles (victorian, bohemian), and understand fine-grained requirements ("has a cat", "fan of Star Wars").
-        </p>
-        -->
+        <!--/ Abstract. -->
+    </div>
+</section>
+
+<section class="section" id="architecture">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-five-fifths">
+                <h2 class="title is-3">Architecture</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        R2SNet is composed of two parallel networks that process the
+                        proposals descriptors (location, dimension, label, and confidence) and their
+                        features related to their correspondent image portion. Each of them aggregates local and global
+                        features of the proposals using shared MLP and a max operation. Their resulting embeddings are
+                        aggregated and processed by 3 heads to address the relabeling, rescoring, and suppression of the input proposal.
+                        The image features of each proposals are extracted by the Background Feature extractor Network (BFNet).
+                        It extracts an image embedding with a pyramidal convolutional neural network
+                        that is sliced according the proposals coordinates fully
+                        end-to-end.
+                    </p>
+                </div>
+                <div class="container is-max-desktop has-text-centered" style="width: 80%">
+                    <div class="container is-clipped" >
+                        <div id="slider">
+
+                            <div class="card is-centered has-text-centered">
+                                <div class="card-image">
+                                    <figure class="image is-covered ">
+                                        <img
+                                                src="static/images/main_architecture.png"
+                                                alt=""
+                                        />
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title">
+                                        R2SNet main architecture.
+                                    </div>
+                                    <div class="item__description">
+                                        <!--Ici une petite description pour tester le slider-->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-covered ">
+                                        <img
+                                                src="static/images/background_network.png"
+                                                alt=""
+                                        />
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title">
+                                        BFNet architecture.
+                                    </div>
+                                    <div class="item__description">
+                                        <!--Ici une petite description pour tester le slider-->
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <script>
+                        bulmaCarousel.attach('#slider', {
+                            slidesToScroll: 1,
+                            slidesToShow: 1,
+                            infinite: true,
+                        });
+                    </script>
+                    <!--
+                    <p class="has-text-centered">
+                        <span class="dnerf">Holodeck</span> can generate diverse types of 3D environments (arcade, spa, museum), customize for styles (victorian, bohemian), and understand fine-grained requirements ("has a cat", "fan of Star Wars").
+                    </p>
+                    -->
+                </div>
+
+            </div>
+        </div>
+        <!--/ Abstract. -->
+    </div>
+</section>
+
+<section class="section" id="experiments">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-five-fifths">
+                <h2 class="title is-3">Experiments</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        To carry out our experiments,we teleoperate a Giraff-X robot for
+                        mapping 4 real environments (3 university facilities and an apartment).
+                        We train different versions of R2SNet using the
+                        25, 50, and 75% of data randomly sampled (the last 25% is used for testing).
+                        R2SNet strongly improves the performance obtained by using the TaskNet alone even
+                        with a few training data.
+
+                    </p>
+                </div>
+                <div class="content has-text-justified">
+                    <video autoplay muted playsinline loop height="100%">
+                        <source src="./static/video/r2snet_experiments.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+            </div>
+        </div>
+        <!--/ Abstract. -->
     </div>
 </section>
 
@@ -218,7 +302,6 @@
 }</code></pre>
     </div>
 </section>
--->
 
 <footer class="footer">
     <div class="container">
