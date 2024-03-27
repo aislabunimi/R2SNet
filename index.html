@@ -142,7 +142,7 @@
                     </p>
                 </div>
                 <div class="content is-centered">
-                    <img src="static/images/cloud_architecture.png" style="width: 60%">
+                    <img src="static/images/cloud_architecture.png" style="width: 80%">
                 </div>
 
             </div>
@@ -177,74 +177,34 @@
                 <div class="content has-text-justified">
                     <p>
                         R2SNet is composed of two parallel networks that process the
-                        proposals descriptors (location, dimension, label, and confidence) and their
-                        features related to their correspondent image portion. Each of them aggregates local and global
-                        features of the proposals using shared MLP and a max operation. Their resulting embeddings are
+                        proposals descriptors (location, dimension, label, and confidence) and the
+                        features related to their correspondent image portion. Each of them extracts local features 
+                        using <b>shared MLPs</b> and a global representation of the proposal set using a permutation invariant <b>max</b> operation. 
+                        These embeddings are
                         aggregated and processed by 3 heads to address the relabeling, rescoring, and suppression of the input proposal.
-                        The image features of each proposals are extracted by the Background Feature extractor Network (BFNet).
-                        It extracts an image embedding with a pyramidal convolutional neural network
-                        that is sliced according the proposals coordinates fully
-                        end-to-end.
                     </p>
                 </div>
-                <div class="container is-max-desktop has-text-centered" style="width: 100%">
-                    <div class="container is-clipped" >
-                        <div id="slider">
-
-                            <div class="card is-centered has-text-centered">
-                                <div class="card-image">
-                                    <figure class="image is-covered ">
-                                        <img
-                                                src="static/images/main_architecture.png"
-                                                alt=""
-                                        />
-                                    </figure>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title">
-                                        R2SNet main architecture.
-                                    </div>
-                                    <div class="item__description">
-                                        <!--Ici une petite description pour tester le slider-->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="image is-covered ">
-                                        <img
-                                                src="static/images/background_network.png"
-                                                alt=""
-                                        />
-                                    </figure>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title">
-                                        BFNet architecture.
-                                    </div>
-                                    <div class="item__description">
-                                        <!--Ici une petite description pour tester le slider-->
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                    <script>
-                        bulmaCarousel.attach('#slider', {
-                            slidesToScroll: 1,
-                            slidesToShow: 1,
-                            infinite: true,
-                        });
-                    </script>
-                    <!--
-                    <p class="has-text-centered">
-                        <span class="dnerf">Holodeck</span> can generate diverse types of 3D environments (arcade, spa, museum), customize for styles (victorian, bohemian), and understand fine-grained requirements ("has a cat", "fan of Star Wars").
-                    </p>
-                    -->
+                <div class="content">
+                    <img src="static/images/main_architecture.png">
+                    <small><p>R2SNet architecture.</p></small>
                 </div>
+
+                <div class="content has-text-justified">
+                    <p>
+                        The Background Feature extractor Network (BFNet) extracts the features of each proposal related to their corresponding region of the image.
+                        At first, BFNet extracts an image embedding using a multi–scale <b>CNN backbone</b>
+                        with residual connections where the 3 embeddings are processed with convolutional
+                        layers and step-by-step top-down aggregated through upsampling and summation.
+                        To speed up the inference time, the image embedding is mapped to each proposal with
+                        a <b>binary mask</b> generated by 4 MLPs with fixed weights which
+                        suppresses the features exceeding the bounding box's boundaries.
+                    </p>
+                </div>
+                <div class="content">
+                    <img src="static/images/background_network.png">
+                    <small><p>BFNet architecture.</p></small>
+                </div>
+
 
             </div>
         </div>
