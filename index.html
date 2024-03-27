@@ -29,10 +29,21 @@
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
     <script src="./static/js/index.js"></script>
+    <script>
+        function ciao(){const videoOne = document.getElementById("videoOne");
+            const videoTwo = document.getElementById("videoTwo");
+
+            videoOne.play();
+            videoTwo.play();
+            console.log('ciao2')
+        }
+
+
+    </script>
 
 </head>
 
-<body>
+<body onload="ciao()">
 
 <section class="hero">
     <div class="hero-body">
@@ -104,6 +115,33 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<section class="section", id="intro">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-five-fifths">
+                <div class="columns">
+                    <div class="column is-half">
+                        <p style="font-size: 1.2em"><b>TaskNet</b></p>
+                        <video  muted loop style="width: 100%" id="videoOne">
+                            <source src="./static/video/single_exp_tasknet.mp4" type="video/mp4">
+                        </video>
+
+                    </div>
+                    <div class="column is-half">
+
+                        <p style="font-size: 1.2em"><b>TaskNet + R2SNet</b></p>
+                        <video  muted loop style="width: 100%" id="videoTwo">
+                            <source src="./static/video/single_exp_r2snet.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ Abstract. -->
     </div>
 </section>
 
